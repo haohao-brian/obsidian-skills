@@ -1,0 +1,4 @@
+interface:
+  display_name: "Obsidian 導航"
+  short_description: "Find a phrase or jump to a source line in Obsidian"
+  default_prompt: "Use $obsidian-navigate to find the passage I mean in my Obsidian note and scroll the desktop app to it."

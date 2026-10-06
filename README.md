@@ -54,6 +54,7 @@ OpenCode auto-discovers all `SKILL.md` files under `~/.opencode/skills/`. No cha
 | [json-canvas](skills/json-canvas)             | Create and edit [JSON Canvas](https://jsoncanvas.org/) files (`.canvas`) with nodes, edges, groups, and connections                                                                        |
 | [obsidian-cli](skills/obsidian-cli)           | Interact with Obsidian vaults via the [Obsidian CLI](https://help.obsidian.md/cli) including plugin and theme development                                                                  |
 | [obsidian-highlight](skills/obsidian-highlight) | Find the intended passage and apply highlights directly to Obsidian Markdown notes, preserving the original text                                                                       |
+| [obsidian-navigate](skills/obsidian-navigate) | Jump to a Markdown source line or search for a keyword or sentence and scroll the Obsidian desktop app to it                                                                          |
 | [defuddle](skills/defuddle)                   | Extract clean markdown from web pages using [Defuddle](https://github.com/kepano/defuddle), removing clutter to save tokens                                                                |
 | [knap](skills/knap)                           | Render Markdown templates from JSON or CSV data using [Knap](https://github.com/obsidianmd/knap), including batch file generation                                                          |
 
@@ -64,3 +65,15 @@ With Obsidian open and its CLI enabled, ask your agent:
 > Use `$obsidian-highlight` to highlight the sentence about heap isolation in my current note.
 
 Or ask naturally: **「幫我把 Obsidian 這段畫螢光筆」**. The skill locates the note and original passage, applies native `==highlight==` markers, and verifies the saved result. It asks for clarification when the target cannot be identified uniquely. This edits Markdown notes, not PDF pages.
+
+## Navigating notes with an agent
+
+Ask **「把目前 Obsidian 筆記跳到第 50 行」**, or **「搜尋『復現目的』並跳到那句」**. `$obsidian-navigate` resolves the source line, scrolls the desktop app, and preserves the note's content and Markdown view mode. Repeated text can be located with surrounding context.
+
+For reading together, ask **「找到這句、畫螢光筆，再帶我看到它」**. The agent combines `obsidian-highlight` with `obsidian-navigate`: save and verify the highlight, then bring that passage into view.
+
+The highlighting and navigation additions are on `codex/obsidian-highlight`. To install these two skills from that branch for Codex:
+
+```bash
+npx skills add 'https://github.com/haohao-brian/obsidian-skills.git#codex/obsidian-highlight' --global --agent codex --skill obsidian-highlight obsidian-navigate
+```

@@ -1,7 +1,7 @@
 {
   "name": "obsidian",
-  "version": "1.1.0",
-  "description": "Create, edit, and highlight Obsidian notes, Bases, and Canvas. Includes a workflow for locating passages and applying highlights directly in the vault.",
+  "version": "1.2.0",
+  "description": "Create, edit, highlight, and navigate Obsidian notes, Bases, and Canvas. Includes workflows for locating passages, applying highlights, and scrolling the desktop app to source lines or phrases.",
   "author": {
     "name": "Steph Ango",
     "url": "https://stephango.com/"

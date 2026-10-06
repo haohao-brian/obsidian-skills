@@ -46,6 +46,8 @@ The helper resolves against current content using `app.vault.process`, rejects a
 
 Read back the edited range. Confirm that only the requested original passages gained highlight markers and that a repeated invocation does not add nested markers. If showing the result in Obsidian, inspect its Reading view or Live Preview and distinguish saved markup from a visually verified highlight.
 
+If the user also asks to jump to the highlighted passage during a reading session, use `obsidian-navigate` after saving, with the same note and original phrase. Verify that the highlighted passage is visible.
+
 Report the note and heading, what was highlighted, and whether it was saved or already highlighted. A returned Markdown string alone does not complete a request to edit a vault note. Put any explanation beside the passage only when the user asks for annotations; otherwise leave the note's prose unchanged.
 
 ## Sources
