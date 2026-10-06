@@ -118,6 +118,8 @@ This entire block is hidden in reading view.
 ==Highlighted text==                   Highlight syntax
 ```
 
+For a request to find a passage and highlight it directly in a vault note, use the `obsidian-highlight` skill. It handles passage targeting, saved edits, and verification; providing formatted text alone does not edit the note.
+
 ## Math (LaTeX)
 
 ```markdown
