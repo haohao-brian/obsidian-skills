@@ -53,5 +53,14 @@ OpenCode auto-discovers all `SKILL.md` files under `~/.opencode/skills/`. No cha
 | [obsidian-bases](skills/obsidian-bases)       | Create and edit [Obsidian Bases](https://help.obsidian.md/bases/syntax) (`.base`) with views, filters, formulas, and summaries                                                             |
 | [json-canvas](skills/json-canvas)             | Create and edit [JSON Canvas](https://jsoncanvas.org/) files (`.canvas`) with nodes, edges, groups, and connections                                                                        |
 | [obsidian-cli](skills/obsidian-cli)           | Interact with Obsidian vaults via the [Obsidian CLI](https://help.obsidian.md/cli) including plugin and theme development                                                                  |
+| [obsidian-highlight](skills/obsidian-highlight) | Find the intended passage and apply highlights directly to Obsidian Markdown notes, preserving the original text                                                                       |
 | [defuddle](skills/defuddle)                   | Extract clean markdown from web pages using [Defuddle](https://github.com/kepano/defuddle), removing clutter to save tokens                                                                |
 | [knap](skills/knap)                           | Render Markdown templates from JSON or CSV data using [Knap](https://github.com/obsidianmd/knap), including batch file generation                                                          |
+
+## Highlighting notes with an agent
+
+With Obsidian open and its CLI enabled, ask your agent:
+
+> Use `$obsidian-highlight` to highlight the sentence about heap isolation in my current note.
+
+Or ask naturally: **「幫我把 Obsidian 這段畫螢光筆」**. The skill locates the note and original passage, applies native `==highlight==` markers, and verifies the saved result. It asks for clarification when the target cannot be identified uniquely. This edits Markdown notes, not PDF pages.

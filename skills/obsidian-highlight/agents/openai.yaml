@@ -1,0 +1,4 @@
+interface:
+  display_name: "Obsidian 螢光筆"
+  short_description: "Find passages and apply highlights directly in Obsidian notes"
+  default_prompt: "Use $obsidian-highlight to find the paragraph I mean and highlight its key sentence directly in my Obsidian note."
